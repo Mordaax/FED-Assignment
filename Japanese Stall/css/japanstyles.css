@@ -1,0 +1,73 @@
+﻿body
+{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../images/stallbg.jpg);
+    background-attachment: fixed;
+}
+
+.beginTitle {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 95px;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 3px 1.5px 1px black;
+    margin-top: 35vh;
+
+}
+
+.subTitle {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 35px;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 3px 1.5px 1px black;
+    margin-bottom: 43vh;
+}
+
+.bigMarker {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    text-shadow: 3px 1.5px 1px azure;
+    font-size: 3.5rem;
+    padding: 3rem;
+    margin: 3rem 3rem 3rem;
+    background-color: rgb(240, 248, 255, 0.7);
+    width: auto;
+    border-radius: 9px;
+}
+
+.carousel {
+    display: block;
+    width: 100%;
+    border-radius: 9px;
+    overflow: hidden;
+}
+/********************************/
+/***********Form styles**********/
+/********************************/
+.japanform {
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgb(245,245,245,0.9);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.formheader {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 70px;
+    text-align: center;
+}
+
+td {
+    width:50%;
+    text-align:center;
+    margin-right:100px;
+}
+
+.formtable {
+    background-color: rgb(255,255,255, 0.9);
+    border-radius: 10px;
+}
+
