@@ -8,6 +8,7 @@
     <title>Japanese Food Stall</title>
     <link rel="shortcut icon" type="image/png" href="images/jpn-circle.png" />
     <link rel="stylesheet" href="css/japanstyles.css" />
+    <script defer src="js/japanScript.js"></script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -17,11 +18,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
-<body>
+<body onload="titleWriter(); delaySubTitle();">
     <div class="container-fluid">
 
-        <h1 class="beginTitle">Japanese Cuisine Stall</h1>
-        <p class="subTitle">Artisans of our craft. A traditional, authentic experience.</p>
+        <h1 class="beginTitle" id="title">&nbsp;</h1>
+        <p class="subTitle" id="subTitle">&nbsp;</p>
         <div class="row">
             <div class="col-xl-1"></div>
             <div class="col-xl-5 d-flex justify-content-center align-self-center">
