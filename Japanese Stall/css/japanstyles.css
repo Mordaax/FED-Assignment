@@ -25,24 +25,52 @@
     margin-bottom: 43vh;
 }
 
-.bigMarker {
+.sideMarker {
     font-family: 'Permanent Marker', cursive;
     text-align: center;
     text-shadow: 3px 1.5px 1px azure;
     font-size: 3.5rem;
     padding: 3rem;
     margin: 3rem 3rem 3rem;
-    background-color: rgb(240, 248, 255, 0.7);
+    background-color: rgb(240, 248, 255, 0.8);
     width: auto;
     border-radius: 9px;
 }
 
+.bigMarker {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 2rem;
+    margin: 2rem 2rem 2rem;
+    background-color: rgb(240, 248, 255, 0.8);
+    width: 70%;
+    border-radius: 9px;
+}
+
+/********************************/
+/*********Carousel styles********/
+/********************************/
 .carousel {
     display: block;
     width: 100%;
     border-radius: 9px;
     overflow: hidden;
 }
+
+.jpnCaption {
+    text-shadow: 3px 1.5px 1px black;
+}
+
+/********************************/
+/**********Modal styles**********/
+/********************************/
+.dishTrigger {
+    cursor: pointer;
+}
+
+
+
 /********************************/
 /***********Form styles**********/
 /********************************/
