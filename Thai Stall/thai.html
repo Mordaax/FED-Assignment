@@ -106,7 +106,7 @@
         <br>
         <br>
 
-        <form class="row g-3">
+        <form class="row g-3" onsubmit="submit_form(); return false;">
             <div class="col-sm-12 col-md-2">
                 <label for="custSalutation" class="form-label">Salutation</label>
                 <select class="form-select" name="custSalutation" placeholder="Salutation">
@@ -137,7 +137,7 @@
             
             <div class="col-sm-12 col-md-8">
                 <label for="custAddr" class="form-label">Delivery Address</label>
-                <input class="form-control" type="email" name="custAddr" placeholder="Enter delivery address">
+                <input class="form-control" type="text" name="custAddr" placeholder="Enter delivery address">
             </div>
 
             <div class="col-sm-12 col-md-4">
@@ -149,6 +149,7 @@
             <hr>
             <wbr>
 
+            <!-- Start of Dish Selection -->
             <div class="row col-12">
                 <div class="col-sm-12 col-md-6">
                     <h1 class="text-center">Dishes</h1>
@@ -165,7 +166,7 @@
                     <wbr>
 
                     <ul class="list-group" id="cartListGroup">
-                        <h3 class="text-center">Start adding orders on the left!</h3>
+                        <h3 class="text-center">Start adding orders to see them here!</h3>
                         <!-- <div class="list-group-item">
                             <div class="row"><div class="col-sm-8">
                                 <h5 class="card-title">{NAME}</h5>
@@ -177,12 +178,39 @@
                                 <input class="text-center form-control" type=number min=1 value=1>
                                 <input type="button" class="btn text-center" value="-">
                             </div>
-                        </div> -->
+                        </div> 
                             
-                        </div>
+                        </div> -->
                     </ul>
                 </div>
             </div>
+            <!-- End of Dish Selection -->
+            <div class="col-sm-12 col-md-6 offset-md-3 text-center">
+                <table class="table col-md-6">
+                    <tr>
+                        <th width="50%"></th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <td id="totalAmount">$0.00</td>
+                    </tr>
+                    <tr>
+                        <th>GST + Service</th>
+                        <td id="GSTAmount">$0.00</td>
+                    </tr>
+                    <tr>
+                        <th>Payable</th>
+                        <td id="payableAmount">$0.00</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button-group btn-group col-sm-12 col-md-6">
+                <button class="btn bg-danger" type="reset" onclick="reset_form()">Reset</button>
+                <button class="btn bg-success">Submit</button>
+            </div>
+
+            
         </form>
         </section>
     </div>

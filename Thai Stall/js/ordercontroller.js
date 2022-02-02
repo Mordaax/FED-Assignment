@@ -1,5 +1,5 @@
 const HEADER_TMP = "<li class=\"list-group-item list-group-item-dark\">{TEXT}</li>"
-const TMP = "<div id=\"{NAME}\" onclick=\"add_order('{NAME}')\" class=\"list-group-item card\"><h5 class=\"card-title\">{NAME}</h5><h6 class=\"card-subtitle\">${PRICE}</h6></div>"
+const TMP = "<div id=\"{NAME}\" onclick=\"add_order_from_element('{NAME}')\" class=\"list-group-item card\"><h5 class=\"card-title\">{NAME}</h5><h6 class=\"card-subtitle\">${PRICE}</h6></div>"
 
 const CART_TMP = "<div class=\"list-group-item\">\
 <div class=\"row\"><div class=\"col-sm-8\">\
@@ -17,7 +17,8 @@ const CART_TMP = "<div class=\"list-group-item\">\
 </div>\
 </div>"
 
-var orders = {}
+var orders = {};
+var total_price = 0.0;
 
 function load_order_dishes() {
     var listgroup = document.getElementById("orderListGroup");
@@ -40,6 +41,18 @@ function add_order(dishname) {
     var dishobj = get_dish_object(dishname);
     if (dishname in orders) {
         orders[dishname][1] += 1;
+    }
+    else {
+        orders[dishname] = [dishobj, 1];
+    }
+
+    update_order(dishname);
+}
+
+function add_order_from_element(dishname) {
+    var dishobj = get_dish_object(dishname);
+    if (dishname in orders) {
+        // update_order_number(dishname, 0);
     }
     else {
         orders[dishname] = [dishobj, 1];
@@ -90,6 +103,7 @@ function update_cart() {
     listgroup.innerHTML = "";
 
     var nQuantity = 0;
+    total_price = 0.0;
 
     for (var order in orders) {
         var dishname = order;
@@ -100,6 +114,8 @@ function update_cart() {
 
         nQuantity += quantity;
 
+        total_price += quantity * dishprice;
+
         listgroup.innerHTML += CART_TMP
             .replace("{NAME}", dishname).replace("{NAME}", dishname).replace("{NAME}", dishname).replace("{NAME}", dishname)
             .replace("{PRICE}", dishprice.toFixed(2))
@@ -109,8 +125,12 @@ function update_cart() {
 
     if (nQuantity == 0)
     {
-        listgroup.innerHTML = "<h3 class=\"text-center\">Start adding orders on the left!</h3>"
+        listgroup.innerHTML = "<h3 class=\"text-center\">Start adding orders to see them here!</h3>"
     }
+
+    document.getElementById("totalAmount").innerText = "$" + total_price.toFixed(2)
+    document.getElementById("GSTAmount").innerText = "$" + (total_price * 0.07).toFixed(2)
+    document.getElementById("payableAmount").innerText = "$" + (total_price * 1.07).toFixed(2)
 }
 
 function get_dish_object(dishname) {
@@ -123,4 +143,18 @@ function get_dish_object(dishname) {
             }
         }
     }
+}
+
+function reset_form() {
+    orders = {};
+    update_cart();
+
+    for (d in document.getElementById("orderListGroup").children)
+    {
+        document.getElementById("orderListGroup").children[d].classList.remove("bg-secondary");
+    }
+}
+
+function submit_form() {
+    document.cookie = JSON.stringify(orders);
 }
