@@ -129,8 +129,8 @@ function update_cart() {
     }
 
     document.getElementById("totalAmount").innerText = "$" + total_price.toFixed(2)
-    document.getElementById("GSTAmount").innerText = "$" + (total_price * 0.07).toFixed(2)
-    document.getElementById("payableAmount").innerText = "$" + (total_price * 1.07).toFixed(2)
+    document.getElementById("GSTAmount").innerText = "$" + (total_price * 0.17).toFixed(2)
+    document.getElementById("payableAmount").innerText = "$" + (total_price * 1.17).toFixed(2)
 }
 
 function get_dish_object(dishname) {
@@ -156,5 +156,34 @@ function reset_form() {
 }
 
 function submit_form() {
-    document.cookie = JSON.stringify(orders);
+    var order_object = {
+        "custName": document.getElementById("custName").value,
+        "custSalutation": document.getElementById("custSalutation").value,
+        "custNo": document.getElementById("custNo").value,
+        "custEmail": document.getElementById("custEmail").value,
+        "custAddr": document.getElementById("custAddr").value,
+        "custDate": document.getElementById("custDate").value,
+        "custTime": document.getElementById("custTime").value,
+        "custOrders": orders,
+        "custTotal": total_price,
+        "custGST": (total_price * 0.17),
+        "custPayable": (total_price * 1.17)
+    }
+
+    document.cookie = encodeURIComponent(JSON.stringify(order_object));
+    window.location = "confirmation.html";
+}
+
+function set_delivery_date() {
+    var dateelement = document.getElementById("custDate");
+
+    var today = new Date();
+    var oneweek = new Date();
+    oneweek.setDate(oneweek.getDate() + 7);
+    
+    var onemonth = new Date();
+    onemonth.setMonth(onemonth.getMonth() + 1);
+
+    dateelement.min = oneweek.toLocaleDateString('en-ca');
+    dateelement.max = onemonth.toLocaleDateString('en-ca');
 }

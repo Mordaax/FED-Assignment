@@ -106,10 +106,10 @@
         <br>
         <br>
 
-        <form class="row g-3" onsubmit="submit_form(); return false;">
+        <form class="row g-3" onsubmit="submit_form()" action="confirmation.html">
             <div class="col-sm-12 col-md-2">
                 <label for="custSalutation" class="form-label">Salutation</label>
-                <select class="form-select" name="custSalutation" placeholder="Salutation">
+                <select class="form-select" name="custSalutation" id="custSalutation" placeholder="Salutation">
                     <option>Mr</option>
                     <option>Ms</option>
                     <option>Mrs</option>
@@ -132,17 +132,22 @@
 
             <div class="col-sm-12">
                 <label for="custEmail" class="form-label">Email Address</label>
-                <input class="form-control" type="email" name="custEmail" placeholder="Enter your email">
+                <input class="form-control" type="email" name="custEmail" id="custEmail" placeholder="Enter your email">
             </div>
             
             <div class="col-sm-12 col-md-8">
                 <label for="custAddr" class="form-label">Delivery Address</label>
-                <input class="form-control" type="text" name="custAddr" placeholder="Enter delivery address">
+                <input class="form-control" type="text" name="custAddr" id="custAddr" placeholder="Enter delivery address">
             </div>
 
-            <div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-2">
                 <label for="custDate" class="form-label">Delivery Date</label>
                 <input class="form-control" type="date" name="custDate" id="custDate">
+            </div>
+
+            <div class="col-sm-12 col-md-2">
+                <label for="custTime" class="form-label">Delivery Time</label>
+                <input class="form-control" type="time" name="custTime" id="custTime">
             </div>
 
             <wbr>
@@ -217,7 +222,8 @@
 
     <script src="js/ordercontroller.js"></script>
     <script>
-        w3.includeHTML()
+        w3.includeHTML();
+        set_delivery_date();
         load_order_dishes();
     </script>
 </body>
