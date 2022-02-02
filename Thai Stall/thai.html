@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Eugenio Manansala" />
+    <meta name="description" content="Thai Stall" />
+    <title>Thai Stall</title>
+
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/thai.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="js/dishes.js"></script>
+    <script defer src="js/modalcontroller.js"></script>
+</head>
+<body>
+    <header></header>
+    <img class="coverimg img-fluid" src="images/cover.jpg">
+    <div class="coverbtns">
+        <div class="btn-group">
+            <a href="#menu" class="btn btn-outline-primary">Menu</a>
+            <a href="#orderForm" class="btn btn-primary">Order</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="aboutUs">
+            <h1 class="text-center">About Us</h1>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor varius lorem sed sodales. Sed in pharetra est. Etiam fermentum, nibh vitae laoreet ultrices, elit enim luctus nunc, nec molestie nisi dolor sit amet leo. Maecenas maximus libero et vulputate sagittis. Nullam a congue ante. Nam sagittis, tellus in tristique tempor, nisl purus iaculis ante, in faucibus lacus urna sit amet odio. Nullam nec blandit lacus. Duis quis felis tellus. Morbi elit ligula, volutpat a lacus ac, vulputate ultrices nisl. Nunc quis dapibus libero. Suspendisse finibus tellus at tristique efficitur. Nunc in condimentum dolor. Curabitur rhoncus volutpat mi sit amet sollicitudin.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <img class="img-fluid" src="images/cover.jpg">
+                    <caption>SRC:</caption>
+                </div>
+            </div>
+        </section>
+
+        <wbr>
+        <hr>
+        <wbr>
+
+        <section id="menu">
+            <h1 class="text-center">Our Menu</h1>
+
+            <!--Import modals-->
+
+            <div w3-include-html="modals.html"></div>
+            
+            <!-- Start of cards -->
+            <div class="row">
+                <div class="card col-sm-12 col-md-4">
+                    <img class="card-img-top" src="images/cover.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Sides</h5>
+                        <p class="card-text">Our dishes are freshly made each time. Grab an appetizer while waiting!</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sidesModal" onclick="create_modals('SIDES', 'sidesModalBody')">Check Out</button>
+                    </div>
+                </div>
+
+                <div class="card col-sm-12 col-md-4">
+                    <img class="card-img-top" src="images/cover.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Mains</h5>
+                        <p class="card-text">We pour our heart and soul into creating the most authentic dishes of Thailand!</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mainsModal" onclick="create_modals('MAINS', 'mainsModalBody')">Check Out</button>
+                    </div>
+                </div>
+
+                <div class="card col-sm-12 col-md-4">
+                    <img class="card-img-top" src="images/cover.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Drinks</h5>
+                        <p class="card-text">Feeling a little thirsty after your meal? Try out our signature thai iced green tea!</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drinksModal" onclick="create_modals('DRINKS', 'drinksModalBody')">Check Out</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of cards -->
+        </section>
+
+        <wbr>
+        <hr>
+        <wbr>
+
+        <section id="orderForm">
+            <h1 class="text-center">Order</h1>
+        </section>
+    </div>
+
+    <script>
+        w3.includeHTML()
+    </script>
+</body>
+</html>
