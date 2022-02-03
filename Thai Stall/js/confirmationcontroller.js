@@ -11,14 +11,14 @@ const TMP = "<div id=\"{NAME}\" class=\"list-group-item card\">\
 </div>\
 </div>"
 function load_confirmation() {
-    var data = JSON.parse(decodeURIComponent(document.cookie));
+    var data = JSON.parse(decodeURIComponent(localStorage.getItem("order-object")));
     console.log(data);
 
     if (data.custSalutation == "Prefer not to say")
     {
         data.custSalutation = "";
     }
-    
+    document.getElementById("orderListGroup").innerHTML = "";
 
     document.getElementById("custName").innerText = data.custSalutation + " " + data.custName;
     delete data.custSalutation;

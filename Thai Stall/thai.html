@@ -266,6 +266,8 @@
         set_delivery_date();
         load_order_dishes();
 
+        localStorage.setItem('order_object', null);
+
         /* if (window.location.href.substring(window.location.href.length-1) != "#")
         {
             window.location.href += "#";

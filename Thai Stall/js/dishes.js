@@ -23,8 +23,8 @@ const dishdata = {
            "Price": 7.9 
         },
         {
-            "Name": "Pho",
-            "Description": "Who could resist having our signature pho?",
+            "Name": "Tom Yum Goong",
+            "Description": "Who could resist having our signature Tom Yum Goong?",
             "Price": 6.5 
         },
         {

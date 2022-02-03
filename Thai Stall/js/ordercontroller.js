@@ -170,9 +170,8 @@ function submit_form() {
         "custPayable": (total_price * 1.17)
     }
 
-    document.cookie = encodeURIComponent(JSON.stringify(order_object));
+    localStorage.setItem('order-object', encodeURIComponent(JSON.stringify(order_object)));
     window.location = "confirmation.html";
-    window.location.reload();
 }
 
 function set_delivery_date() {
