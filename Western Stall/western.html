@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="author" content="Cyrus Tan Rui Xuan" />
+    <meta name="description" content="Western Food Stall" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Western Food Stall</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/westernstyles.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <script src="js/westernscript.js" defer></script>
+    <script src="js/sweetalert.min.js"></script>
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <img class="banner" src="media/Banner.jpg" />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="heading">Western Cuisine</h1>
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="media/Carousel1.png" alt="SpagettiCarbonara" style="width:100%;">
+                <div class="carousel-caption">
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="media/Carousel2.png" alt="SpagettiBolognese" style="width:100%;">
+                <div class="carousel-caption">
+                </div>
+            </div>
+
+
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="container menu">
+        <h1 class="menu-header">Our Menu</h1>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')" id="allbutton"> Show all</button>
+            <button class="btn" onclick="filterSelection('mains')" id="mainsbutton"> Main Dishes</button>
+            <button class="btn" onclick="filterSelection('salads')" id="saladsbutton">Salads</button>
+            <button class="btn" onclick="filterSelection('drinks')" id="drinksbutton">Drinks</button>
+            <button class="btn" onclick="filterSelection('sides')" id="sidesbutton">Sides</button>
+        </div>
+        <!----Main Dishes-->
+        <div class="row" id="mains">
+            <div class="col-sm-4" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/Burger.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Burger $8.80</h3>
+                    <p>Juicy beef patties with melted cheddar cheese, fresh tomatoes, crisp lettuce and fries</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Burger')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/Steak.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Steak $13.50</h3>
+                    <p>Steak grilled to perfection and served with your choice of pineapple BBQ or black pepper sauce.</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Steak')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/FishAndChips.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Fish and Chips $8.80</h3>
+                    <p>Battered fish fillets lightly seasoned, fried to a crisp golden brown and served with creamy tartar sauce.</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Fish and Chips')" />
+                </div>
+            </div>
+        </div>
+        <div class="row" id="mains2">
+            <div class="col-sm-4" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/SpagettiB.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Spaghetti Bolognese $7.90</h3>
+                    <p>A bowl of steaming hot pasta tangled with a beautifully rich and smooth bolognese sauce</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Spaghetti Bolognese')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/SpaghettiCa.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Spaghetti Carbonara $6.90</h3>
+                    <p>Spaghetti with bacon and a creamy sauce with bacon and a creamy sauce made from eggs</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Spaghetti Carbonara')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/BeefLag.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Beef Lasagne $6.90</h3>
+                    <p>Stacked layers of lasagne alternating with fillings such as ground meats, vegetables, cheeses</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Beef Lasagne')" />
+                </div>
+            </div>
+        </div>
+
+        <!----Sides---->
+        <div class="row" id="sides">
+            <div class="col-sm-4" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/Cheese-Fries.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Cheese Fries $4</h3>
+                    <p>Crispy french fries topped two types of melted cheese</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Cheese Fries')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/MozzarellaSticks.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Mozzarella Cheese Sticks $4</h3>
+                    <p>Chunks of rich golden fried Mozzarella cheese sticks.</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Mozzarella Cheese Sticks')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/OnionRings.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Onion Rings $4</h3>
+                    <p>Golden fried onion rings served with our famous tartar sauce.</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Onion Rings')" />
+                </div>
+            </div>
+        </div>
+
+        <!----Salads---->
+        <div class="row" id="salads">
+            <div class="col-sm-4" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/CaesarSalad.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Caesar Salad $4</h3>
+                    <p>Crisp lettuce, eggs, parmesan cheese and cheese croutons tossed with Caesar dressing and dressed with olive oil.</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Caesar Salad')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/PulledChickenSalad.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Pulled Chicken Salad $4</h3>
+                    <p>Fresh lettuce, pulled chicken, cabbage, carrots and tomatoes accompanied by our very own Japanese style sesame dressing.</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Pulled Chicken Salad')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/SmokedSalmonSalad.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Smoked Salmon Salad $4</h3>
+                    <p>A scrumptious medley of lettuce, smoked salmon and capers graced by zesty Italian dressing with naunces of lemon for a piquant touch</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Smoked Salmon Salad')" />
+                </div>
+            </div>
+        </div>
+
+        <!----Drinks---->
+        <div class="row" id="drinks">
+            <div class="col-sm-4" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/IceLemonTea.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Iced Lemon Tea $2</h3>
+                    <p>Refreshing blend of authentic premium black tea with real lemon juice. Experience this delightful citrus blend</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Iced Lemon Tea')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/PeachTea.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Peach Tea $2</h3>
+                    <p>Made using real freshly brewed black tea and peach juice. This tea will certainly bring visions of fresh peaches to your mind.</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Peach Tea')" />
+                </div>
+            </div>
+            <div class="col-sm-4" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                <img src="media/OrangeJuice.jpg" style="width:100%;" />
+                <div class="item-text">
+                    <h3>Orange Juice $2</h3>
+                    <p>Naturally refreshing fruit drink with real fruit juice and real orange pulp, which offers a unique sensory experience</p>
+                    <input class="button" type="button" value="Add To Cart" onclick="additem('Orange Juice')" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="menu-header">Order Form</h1>
+    <div class="container" data-aos="zoom-in-down" data-aos-once="true">
+        <div class="row">
+            <div class="col-sm-12">
+                <form id="form" method="post">
+                    <div id="orderitems" >
+
+                        <div class='orderitem'>
+                            <h3> Total price:</h3><div class='right' id='total'><h3 id="totalprice">$0</h3></div>
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <h2 class="formheader">Deliver To</h2>
+                        <label class="labelAlign" for="name"><i class="fa fa-user"></i> Name:</label>
+                        <input name="name" class="formcontrol" id="name" type="text" autocomplete="on" placeholder="Your name" required>
+
+                        <br />
+                        <label class="labelAlign" for="address"><i class="fa fa-address-card-o"></i> Address:</label>
+                        <textarea name="address" class="formcontrol" id="address" cols="30" rows="2" placeholder="Delivery Address" required></textarea>
+                        <br />
+                        <label class="labelAlign" for="postalcode"><i class="fa fa-home"></i> Postal Code:</label>
+                        <input name="postalcode" class="formcontrol" id="postalcode" type="number" maxlength="6" pattern="[0-9]{6}" placeholder="Delivery Postal Code" required>
+
+                        <br />
+                        <label class="labelAlign" for="phonenumber"><i class="fa fa-phone"></i> Phone Number:</label>
+                        <input name="phonenumber" class="formcontrol" id="phonenumber" type="number" pattern="[689][0-9]{7}" placeholder="Your Phone Number" required>
+
+                        <br />
+                        <label class="labelAlign" for="email"><i class="fa fa-envelope"></i> Email:</label>
+                        <input name="email" class="formcontrol" id="email" type="email" placeholder="Enter email addresses" required>
+
+                        <br />
+                        <label class="labelAlign" for="date" style="width: 50px;">Date:</label>
+                        <input id="date" type="date" min="2019-10-29" max="2019-11-04" required>
+                        <label class="labelAlign" for="time" style="width: 50px;">Time:</label>
+                        <input id="time" type="time" value="10:00" min="10:00" max="22:00" step="15" required>
+
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="formheader">Payment Details</h2>
+                        <label for="fname">Accepted Cards: </label>
+
+                        <i class="fa fa-cc-visa fa-2x" style="color:navy;"></i>
+                        <i class="fa fa-cc-amex fa-2x" style="color:blue;"></i>
+                        <i class="fa fa-cc-mastercard fa-2x" style="color:red;"></i>
+                        <i class="fa fa-cc-discover fa-2x" style="color:orange;"></i>
+
+                        <br />
+                        <label class="labelAlign" for="noc">Name of Card:</label>
+                        <input name="noc" class="formcontrol" id="cardname" type="text" autocomplete="on" placeholder="John Tan" required>
+
+                        <br />
+                        <label class="labelAlign" for="ccn">Card Number:</label>
+                        <input name="ccn" class="formcontrol" id="cardno" type="text" autocomplete="on" placeholder="1111-2222-3333-4444" required>
+
+                        <br />
+                        <label class="labelAlign" for="expmonth" style="width: 100px;">Exp Month:</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="November">
+
+                        <br />
+                        <label class="labelAlign" for="expyear" style="width: 100px;">Exp Year:</label>
+                        <input type="text" id="expyear" name="expyear" placeholder="2024">
+
+                        <br />
+                        <label class="labelAlign" for="cvv" style="width: 100px;">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                    </fieldset>
+                    <input type="submit" id="submit" class="button" name="submit" value="Submit" onclick="submitform()" style="margin-top:10px" />
+                    <input type="reset" id="reset" class="button" name="reset" value="Reset" style="margin-top:10px" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" data-aos="zoom-in-down" data-aos-once="true">
+                <h1 class="menu-header">Locate Us</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3991.561050925468!2d103.77549831428553!3d1.3324389990281913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da108723f5373f%3A0x6e40e274e72cba1d!2sNgee%20Ann%20Poly!5e0!3m2!1sen!2ssg!4v1643622993033!5m2!1sen!2ssg" width="100%" height="450" style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" data-aos="zoom-in-down" data-aos-once="true">
+                <h1 class="menu-header">Opening Hours</h1>
+                <table id="times">
+                    <tr>
+                        <th>Day</th>
+                        <th>Opening Hours</th>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>7:00AM - 5:00PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>7:00AM - 5:00PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>7:00AM - 5:00PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>7:00AM - 5:00PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>7:00AM - 5:00PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Closed</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>Closed</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Closed on public holidays</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Days Closed: 1st Jan | 1st Feb | 2nd Feb | 15th Apr | 1st May | 3rd May | 15th May | 10th Jul | 9th Aug | 24th Oct | 25th Dec</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div w3-include-html="footer.html"></div>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+        w3.includeHTML();
+
+    </script>
+</body>
+</html>
