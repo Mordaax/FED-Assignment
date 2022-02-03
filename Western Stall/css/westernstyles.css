@@ -35,7 +35,7 @@ body {
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    margin-top:20%;
+    margin-top:12%;
     animation: typewriter 4s steps(44) 1s 1 normal both;
 }
 
@@ -55,7 +55,7 @@ body {
 }
 .space {
     width: 100vw;
-    height: 30.5vw;
+    height: 20.5vw;
     border-bottom: 20px solid #d0a341;
 }
 .boorder{
@@ -99,9 +99,7 @@ h3 {
     text-align: center;
     padding: 10px 20px;
 }
-.col-sm-4 header{
 
-}
 #myBtnContainer {
     display: flex;
     justify-content: center;

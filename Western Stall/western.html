@@ -21,8 +21,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/header.css">
 </head>
 <body>
+    <div id="header" w3-include-html="/header.html"></div>
     <img class="banner" src="media/Banner.jpg" />
     <div class="container-fluid">
         <div class="row">
@@ -213,7 +215,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <form id="form" method="post">
-                    <div id="orderitems" >
+                    <div id="orderitems">
 
                         <div class='orderitem'>
                             <h3> Total price:</h3><div class='right' id='total'><h3 id="totalprice">$0</h3></div>
@@ -337,7 +339,7 @@
             </div>
         </div>
     </div>
-    <div w3-include-html="footer.html"></div>
+    <div w3-include-html="/footer.html"></div>
     <script src="js/aos.js"></script>
     <script>
         AOS.init();
