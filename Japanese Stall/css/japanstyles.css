@@ -248,6 +248,14 @@ hr {
     margin: 0 auto !important;
 }
 
+label {
+    margin-bottom: 0.5rem;
+}
+
+.table th, .table td {
+    padding: 0.75rem !important;
+}
+
 .form-group {
     margin-bottom: 1rem;
 }
