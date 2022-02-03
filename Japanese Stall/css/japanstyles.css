@@ -248,6 +248,6 @@ hr {
     margin: 0 auto !important;
 }
 
-.orderremove-btn {
-    float:right;
+.form-group {
+    margin-bottom: 1rem;
 }
