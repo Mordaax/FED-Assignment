@@ -1,0 +1,111 @@
+﻿body {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    margin: auto;
+    font-family: 'Press Start 2P';
+    font-size: 100px;
+    text-align: center;
+    color: darkblue;
+    margin-top: 40vh;
+    margin-bottom: 45vh;
+}
+
+.aboutustext {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    border-radius: 9px;
+    text-align: center;
+    height: 40vh;
+    color: crimson;
+}
+
+.carousel .carouselimage{
+    display: block;
+    width: 100%;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.carouselcaption {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background: white;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkred;
+}
+
+.polaroid {
+    cursor: pointer;
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: all .35s linear;
+}
+
+.polaroid:hover{
+    opacity: 0.7;
+}
+
+.img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: 0.3s;
+    padding: 30px 30px 14px;
+    object-fit: cover;
+}
+
+.modaltext {
+    position: relative;
+    padding-bottom: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.modal-title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.modal-img {
+    position: relative;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-caption {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding-top: 16px;
+}
+
+table, th, td {
+    font-family: Cambria;
+    border: 1px solid;
+    margin: auto;
+    vertical-align: top;
+    background-color: azure;
+    text-align: left;
+}
+
+th:first-child, th:last-child, th:nth-child(2) {
+   background-color: cornsilk;
+}
