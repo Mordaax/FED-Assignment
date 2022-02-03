@@ -1,0 +1,130 @@
+﻿body {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Brush Script MT', fantasy;
+    text-align: center;
+    font-size: 500%;
+    color: black;
+    -webkit-text-stroke: 1px black;
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 50px;
+    border: 2px solid white;
+}
+
+.carousel-indicators li {
+    background-color: grey;
+}
+
+.carousel img {
+    height:auto;
+    width:auto;
+}
+
+button {
+    background-color: bisque;
+    line-height: 1.8em;
+    padding: 1em;
+    border: double 4px aquamarine;
+    border-radius: 25px;
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+button:active {
+    border: double 4px pink;
+    background-color: lightgray;
+}
+
+.content {
+    font-size: 150%;
+    background-color: honeydew;
+    border-radius: 30px;
+    font-family: 'Namun Pen Script', cursive;
+}
+
+#carousell {
+    background-color: antiquewhite;
+    padding: 2em;
+}
+
+#title {
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+#orderForm h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#orderForm h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    border: 10px solid bisque;
+    border-radius: 20px;
+    background-color: aquamarine;
+    margin-top: 20px;
+}
+
+#history {
+    margin-top: 50px;
+}
+
+#history p, #info p {
+    font-size: 150%;
+}
+
+#history h2, #info h2 {
+    margin-bottom: 30px;
+}
+
+#history img, #info img {
+    border: 10px solid bisque;
+}
+
+table {
+    border-collapse: separate;
+    border: 10px solid black;
+    border-radius: 30px;
+    background-color: bisque;
+}
+
+tr {
+    height: 200px;
+}
+
+td {
+    min-width: 500px;
+    border-radius:20px;
+}
+
+tr p {
+    color: black;
+    padding-left: 20px;
+    background-color:bisque;
+    border-radius: 30px;
+    width: 50%;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+.food {
+    width: 200px;
+}
+
+input {
+    padding-right: 40px;
+}
