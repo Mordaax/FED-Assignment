@@ -6,9 +6,13 @@
     background-attachment: fixed;
 }
 
+header {
+    height: 10vh;
+}
+
 .beginTitle {
     font-family: 'Permanent Marker', cursive;
-    font-size: 95px;
+    font-size: 8vw;
     text-align: center;
     color: aliceblue;
     text-shadow: 4px 1.5px 1px black;
@@ -18,23 +22,32 @@
 
 .subTitle {
     font-family: 'Permanent Marker', cursive;
-    font-size: 35px;
+    font-size: 2.8vw;
     text-align: center;
     color: aliceblue;
     text-shadow: 3px 1.5px 1px black;
     margin-bottom: 43vh;
 }
 
+.sideDiv {
+    background-color: rgb(240, 248, 255, 0.8);
+    border-radius: 9px;
+}
+
 .sideMarker {
     font-family: 'Permanent Marker', cursive;
     text-align: center;
-    text-shadow: 3px 1.5px 1px azure;
-    font-size: 3.5rem;
-    padding: 3rem;
-    margin: 3rem 3rem 3rem;
-    background-color: rgb(240, 248, 255, 0.8);
+    font-size: 3.25rem;
     width: auto;
     border-radius: 9px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.sideMarkerText {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .bigMarker {
@@ -62,18 +75,128 @@
     text-shadow: 3px 1.5px 1px black;
 }
 
+
 /********************************/
 /**********Modal styles**********/
 /********************************/
 .dishTrigger {
     cursor: pointer;
+    background-color: aliceblue;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    width: 90%;
 }
 
 
+.dishTriggerImg {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    padding: 30px 30px 14px;
+    border-radius: 5px;
+}
 
-/********************************/
-/***********Form styles**********/
-/********************************/
+
+.dishTriggerText {
+    padding-bottom: 8px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07);
+}
+
+.modal-dish-img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dish-title, .dish-descr {
+    font-size: 1.1vw;
+}
+
+/***************************************/
+/***********Price Table Styles**********/
+/***************************************/
+
+.dishPrice {
+    background-color: rgb(245,245,245,0.9);
+    width: 90% !important;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.pricetable {
+    overflow: scroll;
+}
+
+.priceth {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    font-weight: 100;
+    border-bottom: 2px solid darkslategray !important;
+}
+
+.pricetd {
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 2px solid darkslategray !important;
+}
+
+/*****************************************/
+/***********Dessert Table Styles**********/
+/*****************************************/
+
+.dessertHeader {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.dessertPrice {
+    background-color: rgb(245,245,245,0.9);
+    border-radius: 9px;
+    padding-bottom: 10px;
+}
+
+.dessertpricetd {
+    width: 50%;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 2px solid darkslategray !important;
+}
+
+.dessertbtn {
+    margin: 0 auto;
+    display: flex !important;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+/**************************************/
+/***********Order Form styles**********/
+/**************************************/
 .japanform {
     width: 75%;
     margin: 0 auto;
@@ -88,7 +211,7 @@
     text-align: center;
 }
 
-td {
+.formtd {
     width:50%;
     text-align:center;
     margin-right:100px;
@@ -99,3 +222,32 @@ td {
     border-radius: 10px;
 }
 
+.ordered-list {
+    background-color: white;
+    border-radius: 9px;
+}
+
+.ordered-dish {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    vertical-align: central;
+}
+
+.ordered-name {
+    margin-left: 10px;
+}
+
+.ordered-quantity {
+    margin: 0 auto;
+}
+
+hr {
+    background-color: darkslategray;
+    width: 99%;
+    margin: 0 auto !important;
+}
+
+.orderremove-btn {
+    float:right;
+}
