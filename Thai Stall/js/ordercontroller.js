@@ -172,6 +172,7 @@ function submit_form() {
 
     document.cookie = encodeURIComponent(JSON.stringify(order_object));
     window.location = "confirmation.html";
+    window.location.reload();
 }
 
 function set_delivery_date() {

@@ -2,6 +2,16 @@ header {
     height: 10vh;
 }
 
+cite {
+    font-size: 0.75rem;
+    height: 10vh;
+}
+
+.menu-img {
+    height: 40vh;
+    object-fit: cover;
+}
+
 .coverimg {
     display: block;
     margin: auto;

@@ -18,6 +18,7 @@ function load_confirmation() {
     {
         data.custSalutation = "";
     }
+    
 
     document.getElementById("custName").innerText = data.custSalutation + " " + data.custName;
     delete data.custSalutation;

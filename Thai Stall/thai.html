@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,15 +15,17 @@
     
     <script src="js/dishes.js"></script>
     <script defer src="js/modalcontroller.js"></script>
-    
+    <link rel="stylesheet" href="/css/header.css">
 </head>
 <body>
-    <header></header>
-    <img class="coverimg img-fluid" src="images/cover.jpg">
-    <div class="coverbtns">
-        <div class="btn-group">
-            <a href="#menu" class="btn btn-outline-primary">Menu</a>
-            <a href="#orderForm" class="btn btn-primary">Order</a>
+    <div id="header" w3-include-html="/header.html"></div>
+    <div class="container">
+        <img class="coverimg img-fluid" src="images/cover.png">
+        <div class="coverbtns">
+            <div class="btn-group">
+                <a href="#menu" class="btn btn-outline-primary">Menu</a>
+                <a href="#orderForm" class="btn btn-primary">Order</a>
+            </div>
         </div>
     </div>
 
@@ -33,12 +35,44 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor varius lorem sed sodales. Sed in pharetra est. Etiam fermentum, nibh vitae laoreet ultrices, elit enim luctus nunc, nec molestie nisi dolor sit amet leo. Maecenas maximus libero et vulputate sagittis. Nullam a congue ante. Nam sagittis, tellus in tristique tempor, nisl purus iaculis ante, in faucibus lacus urna sit amet odio. Nullam nec blandit lacus. Duis quis felis tellus. Morbi elit ligula, volutpat a lacus ac, vulputate ultrices nisl. Nunc quis dapibus libero. Suspendisse finibus tellus at tristique efficitur. Nunc in condimentum dolor. Curabitur rhoncus volutpat mi sit amet sollicitudin.
+                        The Thai Bistro, established in 1932, is a world-renowned restaurant serving delicacies from Thailand, 
+                        using ingredients native to the country. We take pride in our award, clinching 14 michelin stars since 
+                        our first restaurant. 
                     </p>
+                    <p>
+                        Today, we serve the heart of Thailand to over 56 countries, with 1932 bistros worldwide! We also open
+                        smaller branches within food courts and educational institutes.
+                    </p>
+                    <p>
+                        No matter where you are, we can bring you closer to Thailand like never before! Come down to our bistro -
+                        you will never be disappointed!
+                    </p>
+
+                    <table class="table table-bordered">
+                        <tr>
+                            <th width="50%">Date</th>
+                            <th>Operating Hours</th>
+                        </tr>
+                        <tr>
+                            <td>Monday to Friday</td>
+                            <td>8:00 AM to 8:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Weekends and Public Holidays</td>
+                            <td>Food Courts and Schools: CLOSED</td>
+                        </tr>
+                        <tr>
+        
+                            <td>Restaurants: 8:00 AM to 1:00 AM</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Note: Operating hours are subject to change. Please check again before making your next visit</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <img class="img-fluid" src="images/cover.jpg">
-                    <caption>SRC:</caption>
+                    <img class="img-fluid" src="images/aboutus.jpg">
+                    <cite>SRC: https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/07/1296x728-header.jpg</cite>
                 </div>
             </div>
         </section>
@@ -57,7 +91,9 @@
             <!-- Start of cards -->
             <div class="row">
                 <div class="card col-sm-12 col-md-4 text-center">
-                    <img class="card-img-top" src="images/cover.jpg">
+                    <wbr>
+                    <img class="card-img-top menu-img" src="images/sides.jpg">
+                    <cite>SRC: https://www.thespruceeats.com/thmb/98ohDAZCELjIcniLsKL3pyFAvcM=/2667x2000/smart/filters:no_upscale()/carlas-deep-fried-egg-rolls-3056161-Hero_01-9f05fec652244799a29c3a77b7fe2caf.jpg</cite>
                     <div class="card-body">
                         <h5 class="card-title">Sides</h5>
                         <p class="card-text">Our dishes are freshly made each time. Grab an appetizer while waiting!</p>
@@ -66,7 +102,9 @@
                 </div>
 
                 <div class="card col-sm-12 col-md-4 text-center">
-                    <img class="card-img-top" src="images/cover.jpg">
+                    <wbr>
+                    <img class="card-img-top menu-img" src="images/mains.jpg">
+                    <cite>SRC: https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000460/img/basic/a0000460_main.jpg</cite>
                     <div class="card-body">
                         <h5 class="card-title">Mains</h5>
                         <p class="card-text">We pour our heart and soul into creating the most authentic dishes of Thailand!</p>
@@ -75,7 +113,9 @@
                 </div>
 
                 <div class="card col-sm-12 col-md-4 text-center">
-                    <img class="card-img-top" src="images/cover.jpg">
+                    <wbr>
+                    <img class="card-img-top menu-img" src="images/drinks.jpg">
+                    <cite>SRC: https://magazine.foodpanda.my/wp-content/uploads/sites/12/2019/11/cropped-Thai-Iced-Green-Milk-Tea.jpg</cite>
                     <div class="card-body">
                         <h5 class="card-title">Drinks</h5>
                         <p class="card-text">Feeling a little thirsty after your meal? Try out our signature thai iced green tea!</p>
@@ -109,7 +149,7 @@
         <form class="row g-3" onsubmit="submit_form()" action="confirmation.html">
             <div class="col-sm-12 col-md-2">
                 <label for="custSalutation" class="form-label">Salutation</label>
-                <select class="form-select" name="custSalutation" id="custSalutation" placeholder="Salutation">
+                <select required class="form-select" name="custSalutation" id="custSalutation" placeholder="Salutation">
                     <option>Mr</option>
                     <option>Ms</option>
                     <option>Mrs</option>
@@ -121,33 +161,33 @@
 
             <div class="col-sm-12 col-md-6">
                 <label for="custName" class="form-label">Name</label>
-                <input class="form-control" type="text" name="custName", id="custName" placeholder="Name">
+                <input required class="form-control" type="text" name="custName", id="custName" placeholder="Name">
             </div>
 
             <div class="col-sm-12 col-md-4">
                 <label for="custNo" class="form-label">Contact Number</label>
-                <input class="form-control" type="text" name="custNo", id="custNo" placeholder="Contact No">
+                <input required class="form-control" type="number" name="custNo", id="custNo" placeholder="Contact No">
             </div>
 
 
             <div class="col-sm-12">
                 <label for="custEmail" class="form-label">Email Address</label>
-                <input class="form-control" type="email" name="custEmail" id="custEmail" placeholder="Enter your email">
+                <input required class="form-control" type="email" name="custEmail" id="custEmail" placeholder="Enter your email">
             </div>
             
             <div class="col-sm-12 col-md-8">
                 <label for="custAddr" class="form-label">Delivery Address</label>
-                <input class="form-control" type="text" name="custAddr" id="custAddr" placeholder="Enter delivery address">
+                <input required class="form-control" type="text" name="custAddr" id="custAddr" placeholder="Enter delivery address">
             </div>
 
             <div class="col-sm-12 col-md-2">
                 <label for="custDate" class="form-label">Delivery Date</label>
-                <input class="form-control" type="date" name="custDate" id="custDate">
+                <input required class="form-control" type="date" name="custDate" id="custDate">
             </div>
 
             <div class="col-sm-12 col-md-2">
                 <label for="custTime" class="form-label">Delivery Time</label>
-                <input class="form-control" type="time" name="custTime" id="custTime">
+                <input required class="form-control" type="time" name="custTime" id="custTime">
             </div>
 
             <wbr>
@@ -225,6 +265,12 @@
         w3.includeHTML();
         set_delivery_date();
         load_order_dishes();
+
+        /* if (window.location.href.substring(window.location.href.length-1) != "#")
+        {
+            window.location.href += "#";
+            window.location.reload();
+        } */
     </script>
 </body>
 </html>
