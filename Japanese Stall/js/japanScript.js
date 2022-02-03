@@ -25,5 +25,5 @@ function subTitleWriter() {
 }
 
 function delaySubTitle() {
-    setTimeout(subTitleWriter, 1200);
+    setTimeout(subTitleWriter, 1400);
 }

@@ -1,0 +1,47 @@
+header {
+    height: 10vh;
+}
+
+cite {
+    font-size: 0.75rem;
+    height: 10vh;
+}
+
+.menu-img {
+    height: 40vh;
+    object-fit: cover;
+}
+
+.coverimg {
+    display: block;
+    margin: auto;
+    max-height: 70vh;
+    object-fit: scale-down;
+}
+
+.coverbtns {
+    height: 20vh;
+}
+    .coverbtns .btn-group {
+        margin-top: 7.5vh;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+form .btn-group {
+    left: 50%;
+    transform: translatex(-50%);
+}

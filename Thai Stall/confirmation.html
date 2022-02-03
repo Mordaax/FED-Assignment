@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Eugenio Manansala" />
+    <meta name="description" content="Thai Stall Order Confirmation" />
+    <title>Thai Stall Order Confirmation</title>
+
+    <link rel="stylesheet" href="css/thai.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    
+    <script src="js/dishes.js"></script>
+    <script defer src="js/modalcontroller.js"></script>
+    <script src="js/confirmationcontroller.js"></script>
+    
+</head>
+<body>
+    <header></header>
+    <h1 class="text-center">Confirmation</h1>
+    <p class="text-center">
+        Congratulations, your order has been placed successfully!
+        Below are the details of your order. Remember to save this page for your 
+        own reference
+    </p>
+
+    <div class="container">
+        <section>
+            <h2 class="text-center">Contact Information</h2>
+            <table class="table table-bordered text-center">
+                <tr>
+                    <th width="50%">Name</th>
+                    <td id="custName">custName</td>
+                </tr>
+                <tr>
+                    <th>Contact Number</th>
+                    <td id="custNo">custNo</td>
+                </tr>
+                <tr>
+                    <th width="50%">Email Address</th>
+                    <td id="custEmail">custEmail</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2 class="text-center">Delivery Information</h2>
+            <table class="table table-bordered text-center">
+                <tr>
+                    <th width="50%">Address</th>
+                    <td id="custAddr">custAddr</td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td id="custDate">custDate</td>
+                </tr>
+                <tr>
+                    <th>Time</th>
+                    <td id="custTime">custTime</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2 class="text-center">Orders</h2>
+
+            <ul class="list-group" id="orderListGroup">
+
+            </ul>
+        </section>
+        <section>
+            <h2 class="text-center">Payment</h2>
+            <table class="table table-bordered text-center">
+                <tr>
+                    <th width="50%">Total Amount</th>
+                    <td id="custTotal">custTotal</td>
+                </tr>
+                <tr>
+                    <th>GST + Service</th>
+                    <td id="custGST">custGST</td>
+                </tr>
+                <tr>
+                    <th>Total Payable</th>
+                    <td id="custPayable">custPayable</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("orderListGroup").innerHTML = "";
+        load_confirmation();
+    </script>
+</body>
