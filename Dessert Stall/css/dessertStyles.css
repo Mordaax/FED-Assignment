@@ -39,13 +39,6 @@ button:active {
     background-color: lightgray;
 }
 
-.content {
-    font-size: 150%;
-    background-color: honeydew;
-    border-radius: 30px;
-    font-family: 'Namun Pen Script', cursive;
-}
-
 #carousell {
     background-color: antiquewhite;
     padding: 2em;
@@ -72,7 +65,6 @@ form {
     padding: 30px;
     border: 10px solid bisque;
     border-radius: 20px;
-    background-color: aquamarine;
     margin-top: 20px;
 }
 
@@ -92,30 +84,6 @@ form {
     border: 10px solid bisque;
 }
 
-table {
-    border-collapse: separate;
-    border: 10px solid black;
-    border-radius: 30px;
-    background-color: bisque;
-}
-
-tr {
-    height: 200px;
-}
-
-td {
-    min-width: 500px;
-    border-radius:20px;
-}
-
-tr p {
-    color: black;
-    padding-left: 20px;
-    background-color:bisque;
-    border-radius: 30px;
-    width: 50%;
-}
-
 label {
     display: inline-block;
     width: 100px;
@@ -127,4 +95,75 @@ label {
 
 input {
     padding-right: 40px;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+h5 {
+    font-size: 80%;
+    color: red;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+h6 {
+    font-weight: bold;
+}
+
+#menu table {
+    border-collapse: separate;
+    border: 10px solid black;
+    border-radius: 30px;
+    background-color: bisque;
+}
+
+#menu tr {
+    height: 200px;
+}
+
+#menu td {
+    min-width: 500px;
+    border-radius: 20px;
+}
+
+#menu tr p {
+    color: black;
+    padding-left: 20px;
+    background-color: bisque;
+    border-radius: 30px;
+    width: 50%;
+}
+
+#confirmation table {
+    border: 1px solid black;
+}
+
+#confirmation td {
+    min-width: 400px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+}
+
+#confirmation th {
+    text-align: center;
+    border: 1px solid black;
+    min-width: 400px;
+}
+
+#orderDetails td {
+    min-width: 265px;
+}
+
+#orderDetails th {
+    min-width: 265px;
+}
+
+h7 {
+    font-size: 200%;
+    font-weight: bold;
+    text-decoration: underline;
 }

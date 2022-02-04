@@ -12,7 +12,7 @@
     <script src="js/dessertScript.js" defer></script>
 
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dessertStyles.css">
     <link rel="stylesheet" href="css/aos.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -172,17 +172,17 @@
         <div class="row" id="orderForm">
             <div class="col-sm-12">
                 <h2>Order Your Deserts Here!</h2>
-                <form>
+                <form onreset="resetForm()" onsubmit="submitForm()">
                     <h3>--- Particulars ---</h3>
 
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <label for="name">Full Name:</label>
-                            <input type="text" id="name" placeholder="Name" />
+                            <input type="text" id="name" placeholder="Name" required/>
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <label for="phone">Phone #:</label>
-                            <input type="text" id="phone" pattern="[6|8|9]{1}[0-9]{7}" placeholder="Phone Number" />
+                            <input type="text" id="phone" placeholder="Phone Number" required/>
                         </div>
                     </div>
 
@@ -191,11 +191,11 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <label for="address">Address:</label>
-                            <textarea id="address" rows="2" cols="30" placeholder="Address"></textarea>
+                            <textarea id="address" rows="2" cols="30" placeholder="Address" required></textarea>
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <label for="postal">Postal Code:</label>
-                            <input type="text" id="postal" pattern="[0-9]{6}" placeholder="Postal Code"/>
+                            <input type="text" id="postal" pattern="[0-9]{6}" placeholder="Postal Code" required/>
                         </div>
                     </div>
 
@@ -203,34 +203,35 @@
 
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
-                            <label for="date">Date:</label>
-                            <input type="date" id="date" min="2019-10-29" max="2019-11-04" required />
+                            <label for="date" style="width:120px;">Delivery Date:</label>
+                            <input type="date" id="date" required />
                         </div>
                         <div class="col-sm-12 col-md-6">
-                            <label for="time">Time:</label>
-                            <input type="time" id="time" min="10:00" max="22:00" required step="15" value="10:00" />
+                            <label for="time" style="width:120px;">Delivery Time:</label>
+                            <input type="time" id="time" required/>
                         </div>
                     </div>
                     
                     <br /><br />
 
                     <h3>--- Order ---</h3>
+                    <h5>Note: Orders must be made at least 2 hours prior to delivery time and no orders will be accepted between 8:00PM and 9:00AM</h5>
                     <div class="row">
                         <div class="col-sm-12 col-md-3">
                             <label for="food1" class="food">Ice Jelly w Cocktail</label>
-                            <input type="number" id="food1" min="0" value="0" />
+                            <input type="number" id="food1" min="0" value="0" onclick="orderPrice()"/>
                         </div>
                         <div class="col-sm-12 col-md-3">
                             <label for="food2" class="food">Ice Kachang</label>
-                            <input type="number" id="food2" min="0" value="0" />
+                            <input type="number" id="food2" min="0" value="0" onclick="orderPrice()"/>
                         </div>
                         <div class="col-sm-12 col-md-3">
                             <label for="food3" class="food">Strawberry Milk Ice</label>
-                            <input type="number" id="food3" min="0" value="0" />
+                            <input type="number" id="food3" min="0" value="0" onclick="orderPrice()"/>
                         </div>
                         <div class="col-sm-12 col-md-3">
                             <label for="food4" class="food">Mango Milk Ice</label>
-                            <input type="number" id="food4" min="0" value="0" />
+                            <input type="number" id="food4" min="0" value="0" onclick="orderPrice()"/>
                         </div>
                     </div>
 
@@ -239,22 +240,25 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-3">
                             <label for="food5" class="food">Red Ruby w Sago</label>
-                            <input type="number" id="food5" min="0" value="0" />
+                            <input type="number" id="food5" min="0" value="0" onclick="orderPrice()"/>
                         </div>
                         <div class="col-sm-12 col-md-3">
                             <label for="food6" class="food">Fruit Chin Chow Combo</label>
-                            <input type="number" id="food6" min="0" value="0" />
+                            <input type="number" id="food6" min="0" value="0" onclick="orderPrice()"/>
                         </div>
                         <div class="col-sm-12 col-md-3">
                             <label for="food7" class="food">Atap Seed w Rose Syrup</label>
-                            <input type="number" id="food7" min="0" value="0" />
+                            <input type="number" id="food7" min="0" value="0" onclick="orderPrice()"/>
                         </div>
                         <div class="col-sm-12 col-md-3">
                             <label for="food8" class="food">Mango Pomelo Sago</label>
-                            <input type="number" id="food8" min="0" value="0" />
+                            <input type="number" id="food8" min="0" value="0" onclick="orderPrice()"/>
                         </div>
                     </div>
                     <br /><br />
+
+                    <div id="orderInfo">
+                    </div>
 
                     <input type="submit" value="Place Order"/>
                     &nbsp;&nbsp;
