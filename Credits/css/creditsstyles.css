@@ -1,0 +1,28 @@
+﻿body
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    background-color: azure;
+}
+
+.heading {
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 45vh;
+    margin-bottom: 45vh;
+}
+
+img {
+    position: relative;
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px black;
+}
+
+.name {
+    text-align: center;
+}
