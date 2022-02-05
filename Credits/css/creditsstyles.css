@@ -2,17 +2,30 @@
 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
+    background: azure;
 }
 
-* {
+html {
+    background: azure;
+}
+
+header {
+    height: 10vh;
+}
+
+.container-fluid {
+    background-color: azure;
+}
+
+.container-fluid *{
     background-color: azure;
 }
 
 .heading {
     font-size: 5vw;
     text-align: center;
-    margin-top: 45vh;
-    margin-bottom: 45vh;
+    padding-top: 45vh;
+    padding-bottom: 45vh;
 }
 
 img {
@@ -25,4 +38,16 @@ img {
 
 .name {
     text-align: center;
+}
+
+.line-separator {
+    border-bottom: 1px solid grey;
+    background-color: azure;
+    height: 10px;
+    width: 100%;
+}
+
+.separator {
+    background-color: azure;
+    height: 20px;
 }

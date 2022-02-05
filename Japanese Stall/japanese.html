@@ -23,7 +23,7 @@
 </head>
 <body onload="titleWriter(); delaySubTitle(); RestrictDate();">
     <div class="container-fluid">
-
+        <div id="header" w3-include-html="/header.html"></div>
         <h1 class="beginTitle" id="title">&nbsp;</h1>
         <p class="subTitle" id="subTitle">&nbsp;</p>
         <div class="row">
@@ -223,7 +223,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-5 dessertPrice"  data-aos="fade-left">
+            <div class="col-lg-5 dessertPrice" data-aos="fade-left">
                 <h1 class="dessertHeader">Price</h1>
                 <table class="table pricetable">
                     <tr>
@@ -259,7 +259,7 @@
         </div>
         <br />
 
-        <div class="row" id="japanform" >
+        <div class="row" id="japanform">
             <div class="col-sm-12">
                 <form class="japanform" data-aos="zoom-in" onsubmit=" return ValidateForm()" onreset="ResetOrders()">
                     <h1 class="formheader">Order Now!</h1>
@@ -356,10 +356,13 @@
                 </form>
             </div>
         </div>
+        <br />
     </div>
+    <div w3-include-html="/footer.html"></div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+        w3.includeHTML();
     </script>
 </body>
 </html>
