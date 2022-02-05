@@ -324,7 +324,7 @@
                         </div>
                         <div class="form-group col-sm-6">
                             <label for="inputTime">Delivery Time</label>
-                            <input class="form-control" type="time" id="inputTime" name="inputTime" required />
+                            <input class="form-control" type="time" id="inputTime" name="inputTime" min="09:00:00" max="20:00:00" oninvalid="this.setCustomValidity('Delivery time must be between 9.00am and 8.00pm!')" oninput="this.setCustomValidity('')" required />
                         </div>
                     </div>
 
