@@ -20,6 +20,7 @@
     <script src="js/chickenRicescript.js" defer></script>
 </head>
 <body onload="titleWriter(); UpdateDate()">
+    <div id="header" w3-include-html="../header.html"></div>
     <div id="myModal" class="modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -407,8 +408,10 @@
         </section>
         <br />
     </div>
+    <div w3-include-html="../footer.html"></div>
     <script>
         AOS.init();
+        w3.includeHTML();
     </script>
 </body>
 </html>
