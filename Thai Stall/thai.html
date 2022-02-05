@@ -19,6 +19,9 @@
 </head>
 <body>
     <div id="header" w3-include-html="/header.html"></div>
+
+    <wbr />
+
     <div class="container">
         <img class="coverimg img-fluid" src="images/cover.png">
         <div class="coverbtns">
@@ -35,9 +38,9 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <p>
-                        The Thai Bistro, established in 1932, is a world-renowned restaurant serving delicacies from Thailand, 
-                        using ingredients native to the country. We take pride in our award, clinching 14 michelin stars since 
-                        our first restaurant. 
+                        The Thai Bistro, established in 1932, is a world-renowned restaurant serving delicacies from Thailand,
+                        using ingredients native to the country. We take pride in our award, clinching 14 michelin stars since
+                        our first restaurant.
                     </p>
                     <p>
                         Today, we serve the heart of Thailand to over 56 countries, with 1932 bistros worldwide! We also open
@@ -62,7 +65,7 @@
                             <td>Food Courts and Schools: CLOSED</td>
                         </tr>
                         <tr>
-        
+
                             <td>Restaurants: 8:00 AM to 1:00 AM</td>
                         </tr>
                         <tr>
@@ -87,7 +90,7 @@
             <!--Import modals-->
 
             <div w3-include-html="modals.html"></div>
-            
+
             <!-- Start of cards -->
             <div class="row">
                 <div class="card col-sm-12 col-md-4 text-center">
@@ -132,133 +135,135 @@
 
         <section id="orderForm">
             <h1 class="text-center">Order</h1>
-        <p class="text-center">Having a large party? We got you covered! Through our order form, you can place a booking for your celebration in just a few clicks!</p>
-        
-        <div class="row">
-            <div class="card bg-warning col-sm-12 col-md-6 offset-md-3">
-                <div class="card-header bg-transparent">Note</div>
-                <div class="card-body">
-                    Orders must be made 1 week, up to 1 month, in advance for our staff to prepare the necessary items on the delivery day.
+            <p class="text-center">Having a large party? We got you covered! Through our order form, you can place a booking for your celebration in just a few clicks!</p>
+
+            <div class="row">
+                <div class="card bg-warning col-sm-12 col-md-6 offset-md-3">
+                    <div class="card-header bg-transparent">Note</div>
+                    <div class="card-body">
+                        Orders must be made 1 week, up to 1 month, in advance for our staff to prepare the necessary items on the delivery day.
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <br>
-        <br>
+            <br>
+            <br>
 
-        <form class="row g-3" onsubmit="submit_form()" action="confirmation.html">
-            <div class="col-sm-12 col-md-2">
-                <label for="custSalutation" class="form-label">Salutation</label>
-                <select required class="form-select" name="custSalutation" id="custSalutation" placeholder="Salutation">
-                    <option>Mr</option>
-                    <option>Ms</option>
-                    <option>Mrs</option>
-                    <option>Mdm</option>
-                    <option>Dr</option>
-                    <option>Prefer not to say</option>
-                </select>
-            </div>
-
-            <div class="col-sm-12 col-md-6">
-                <label for="custName" class="form-label">Name</label>
-                <input required class="form-control" type="text" name="custName", id="custName" placeholder="Name">
-            </div>
-
-            <div class="col-sm-12 col-md-4">
-                <label for="custNo" class="form-label">Contact Number</label>
-                <input required class="form-control" type="number" name="custNo", id="custNo" placeholder="Contact No">
-            </div>
-
-
-            <div class="col-sm-12">
-                <label for="custEmail" class="form-label">Email Address</label>
-                <input required class="form-control" type="email" name="custEmail" id="custEmail" placeholder="Enter your email">
-            </div>
-            
-            <div class="col-sm-12 col-md-8">
-                <label for="custAddr" class="form-label">Delivery Address</label>
-                <input required class="form-control" type="text" name="custAddr" id="custAddr" placeholder="Enter delivery address">
-            </div>
-
-            <div class="col-sm-12 col-md-2">
-                <label for="custDate" class="form-label">Delivery Date</label>
-                <input required class="form-control" type="date" name="custDate" id="custDate">
-            </div>
-
-            <div class="col-sm-12 col-md-2">
-                <label for="custTime" class="form-label">Delivery Time</label>
-                <input required class="form-control" type="time" name="custTime" id="custTime">
-            </div>
-
-            <wbr>
-            <hr>
-            <wbr>
-
-            <!-- Start of Dish Selection -->
-            <div class="row col-12">
-                <div class="col-sm-12 col-md-6">
-                    <h1 class="text-center">Dishes</h1>
-                    <wbr>
-                    <ul class="list-group" id="orderListGroup">
-                        
-
-                    </ul>
+            <form class="row g-3" onsubmit="submit_form()" action="confirmation.html">
+                <div class="col-sm-12 col-md-2">
+                    <label for="custSalutation" class="form-label">Salutation</label>
+                    <select required class="form-select" name="custSalutation" id="custSalutation" placeholder="Salutation">
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mdm</option>
+                        <option>Dr</option>
+                        <option>Prefer not to say</option>
+                    </select>
                 </div>
-
 
                 <div class="col-sm-12 col-md-6">
-                    <h1 class="text-center">Your Cart</h1>
-                    <wbr>
-
-                    <ul class="list-group" id="cartListGroup">
-                        <h3 class="text-center">Start adding orders to see them here!</h3>
-                        <!-- <div class="list-group-item">
-                            <div class="row"><div class="col-sm-8">
-                                <h5 class="card-title">{NAME}</h5>
-                                <h6 class="card-subtitle">{PRICE}</h6>
-                                <p class="card-body">{DESCRIPTION}</p>
-                            </div>
-                            <div class="col-sm-4 row">
-                                <input type="button" class="btn text-center" value="+">
-                                <input class="text-center form-control" type=number min=1 value=1>
-                                <input type="button" class="btn text-center" value="-">
-                            </div>
-                        </div> 
-                            
-                        </div> -->
-                    </ul>
+                    <label for="custName" class="form-label">Name</label>
+                    <input required class="form-control" type="text" name="custName" , id="custName" placeholder="Name">
                 </div>
-            </div>
-            <!-- End of Dish Selection -->
-            <div class="col-sm-12 col-md-6 offset-md-3 text-center">
-                <table class="table col-md-6">
-                    <tr>
-                        <th width="50%"></th>
-                        <th>Amount</th>
-                    </tr>
-                    <tr>
-                        <th>Total</th>
-                        <td id="totalAmount">$0.00</td>
-                    </tr>
-                    <tr>
-                        <th>GST + Service</th>
-                        <td id="GSTAmount">$0.00</td>
-                    </tr>
-                    <tr>
-                        <th>Payable</th>
-                        <td id="payableAmount">$0.00</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="button-group btn-group col-sm-12 col-md-6">
-                <button class="btn bg-danger" type="reset" onclick="reset_form()">Reset</button>
-                <button class="btn bg-success">Submit</button>
-            </div>
 
-            
-        </form>
+                <div class="col-sm-12 col-md-4">
+                    <label for="custNo" class="form-label">Contact Number</label>
+                    <input required class="form-control" type="text" pattern="^[89]{1}[0-9]{7}$" name="custNo" , id="custNo" placeholder="Contact No">
+                </div>
+
+
+                <div class="col-sm-12">
+                    <label for="custEmail" class="form-label">Email Address</label>
+                    <input required class="form-control" type="email" name="custEmail" id="custEmail" placeholder="Enter your email">
+                </div>
+
+                <div class="col-sm-12 col-md-8">
+                    <label for="custAddr" class="form-label">Delivery Address</label>
+                    <input required class="form-control" type="text" name="custAddr" id="custAddr" placeholder="Enter delivery address">
+                </div>
+
+                <div class="col-sm-12 col-md-2">
+                    <label for="custDate" class="form-label">Delivery Date</label>
+                    <input required class="form-control" type="date" name="custDate" id="custDate">
+                </div>
+
+                <div class="col-sm-12 col-md-2">
+                    <label for="custTime" class="form-label">Delivery Time</label>
+                    <input required class="form-control" type="time" name="custTime" id="custTime">
+                </div>
+
+                <wbr>
+                <hr>
+                <wbr>
+
+                <!-- Start of Dish Selection -->
+                <div class="row col-12">
+                    <div class="col-sm-12 col-md-6">
+                        <h1 class="text-center">Dishes</h1>
+                        <wbr>
+                        <ul class="list-group" id="orderListGroup">
+                        </ul>
+                    </div>
+
+
+                    <div class="col-sm-12 col-md-6">
+                        <h1 class="text-center">Your Cart</h1>
+                        <wbr>
+
+                        <ul class="list-group" id="cartListGroup">
+                            <h3 class="text-center">Start adding orders to see them here!</h3>
+                            <!-- <div class="list-group-item">
+                                <div class="row"><div class="col-sm-8">
+                                    <h5 class="card-title">{NAME}</h5>
+                                    <h6 class="card-subtitle">{PRICE}</h6>
+                                    <p class="card-body">{DESCRIPTION}</p>
+                                </div>
+                                <div class="col-sm-4 row">
+                                    <input type="button" class="btn text-center" value="+">
+                                    <input class="text-center form-control" type=number min=1 value=1>
+                                    <input type="button" class="btn text-center" value="-">
+                                </div>
+                            </div>
+
+                            </div> -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- End of Dish Selection -->
+                <div class="col-sm-12 col-md-6 offset-md-3 text-center">
+                    <table class="table col-12">
+                        <tr>
+                            <th width="50%"></th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr>
+                            <th>Total</th>
+                            <td id="totalAmount">$0.00</td>
+                        </tr>
+                        <tr>
+                            <th>GST + Service</th>
+                            <td id="GSTAmount">$0.00</td>
+                        </tr>
+                        <tr>
+                            <th>Payable</th>
+                            <td id="payableAmount">$0.00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="button-group btn-group col-sm-12 col-md-6 text-center">
+                    <button class="btn bg-danger col-sm-12 col-md-6" type="reset" onclick="reset_form()">Reset</button>
+                    <button class="btn bg-success col-sm-12 col-md-6">Submit</button>
+                </div>
+
+
+            </form>
         </section>
     </div>
+
+    <wbr />
+
+    <div w3-include-html="/footer.html"></div>
 
     <script src="js/ordercontroller.js"></script>
     <script>
