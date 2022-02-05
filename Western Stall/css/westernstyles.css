@@ -1,10 +1,7 @@
 ﻿html {
-    /*overflow: hidden;*/
     overflow-x:hidden;
 }
-body {
-    /*height: calc(100vh - 8em);*/
-}
+
 .banner {
     width:100vw;
     z-index:-1;
@@ -12,7 +9,6 @@ body {
     left:0px;
     top:0px;
 }
-
 
 @font-face {
     font-family: NexaRust;
@@ -26,16 +22,23 @@ body {
         url('../fonts/NexaRustSlabBlack3.woff') format('woff');
 }
 
+.western-header {
+    font-size: 1.5rem !important;
+    z-index: -1 !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+}
+
 .heading {
     position: relative;
-    font-family:NexaRust;
+    font-family: NexaRust;
     margin: 0 auto;
-    font-size:6vw;
-    color:black;
+    font-size: 6vw;
+    color: black;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    margin-top:12%;
+    margin-top: 12%;
     animation: typewriter 4s steps(44) 1s 1 normal both;
 }
 
@@ -76,6 +79,7 @@ body {
     color: #d0a341;
     font-family: NexaRustBlack;
     margin:40px;
+    font-size:4rem;
 }
 
 
@@ -118,6 +122,7 @@ h3 {
     padding: 12px 16px;
     background-color: #f1f1f1;
     cursor: pointer;
+    font-size:2rem !important;
 }
 .btn.active {
         background-color: #FFC74F;
@@ -214,7 +219,6 @@ label {
     border-collapse: collapse;
     width: 100%;
     border-radius:10px;
-    margin-bottom:5%;
 }
 
 
@@ -229,4 +233,13 @@ label {
      text-align: left;
      background-color: #d0a341;
      color: white;
+}
+
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
 }
