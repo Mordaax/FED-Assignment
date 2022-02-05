@@ -3,47 +3,47 @@ data = [
     {
         "name": "Steamed Chicken Rice",
         "image": "images/SteamedChickenRice.jpg",
-        "caption": "nigga"
+        "caption": "Our Steamed chicken rice is the most popular dish out of every other dish that we sell. This is a recommended fan favourite!"
     },
     {
         "name": "Roasted Chicken Rice",
         "image": "images/RoastedChickenRice.jpg",
-        "caption": "nigga"
+        "caption": "Coming up next is our signature Roasted chicken rice. Many people have debated whether it is better than our Steamed chicken rice, what do you think?"
     },
     {
         "name": "Soy Sauce Chicken Rice",
         "image": "images/SoySauceChickenRice.jpg",
-        "caption": "nigga"
+        "caption": "This classic dish is loved by many of our customers, it may not be as popular as the Steamed or Roasted chicken rice, but it still packs a punch to your taste buds!"
     },
     {
         "name": "Hainanese Chicken Rice",
         "image": "images/HainaneseChickenRice.jpg",
-        "caption": "nigga"
+        "caption": "Our Hainanese chicken rice is also a fan favourite. This dish will tickle on your taste buds as you savour each and every taste."
     },
     {
         "name": "Char Siew Rice",
         "image": "images/CharSiew.jpg",
-        "caption": "nigga"
+        "caption": "You may not know this, but the Char Siew rice is the owner's favourite dish! It is guaranteed that you will enjoy this!"
     },
     {
         "name": "Char Siew Roasted Pork Rice",
         "image": "images/CharSiewRoasted.jpg",
-        "caption": "nigga"
+        "caption": "This dish is a common dish that combines the Char Siew and the Roasted pork together."
     },
     {
         "name": "Roasted Pork Rice",
         "image": "images/RoastedPorkRice.jpg",
-        "caption": "nigga"
+        "caption": "The Roasted pork rice may not be as popular as the other dishes, but customers still enjoy it from time to time."
     },
     {
         "name": "Braised Duck Rice",
         "image": "images/BraisedDuckRice.jpg",
-        "caption": "nigga"
+        "caption": "The Braised duck rice was originally not in the menu, but due to the customer's demand, it was finally added to the list. Don't miss out!"
     },
     {
         "name": "Roasted Duck Rice",
         "image": "images/RoastedDuckRice.jpg",
-        "caption": "nigga"
+        "caption": "The Roasted duck rice was originally the only duck rice that was on the menu. Now, customers like enjoys both the Braised and Roasted duck rice"
     }
 ]
 
