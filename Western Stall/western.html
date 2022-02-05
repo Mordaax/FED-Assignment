@@ -25,7 +25,7 @@
 </head>
 <body>
     <div class="western-header" id="header" w3-include-html="/header.html"></div>
-    <img class="banner" src="media/Banner.jpg" />
+    <img id="scrollbanner" class="banner" src="media/Banner.jpg" />
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -51,8 +51,6 @@
                 <div class="carousel-caption">
                 </div>
             </div>
-
-
         </div>
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
@@ -63,6 +61,13 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    <ul class="scrollul">
+        <li><a href="#scrollform">Order Form</a></li>
+        <li><a href="#scrollmap">Locate Us</a></li>
+        <li><a href="#scrolltable">Opening Hours</a></li>
+        <li><a href="#scrollreview">Reviews</a></li>
+    </ul> 
+
     <div class="container menu" style="font-size:1.5rem;">
         <h1 class="menu-header">Our Menu</h1>
         <div id="myBtnContainer">
@@ -210,7 +215,7 @@
             </div>
         </div>
     </div>
-    <h1 class="menu-header">Order Form</h1>
+    <h1 class="menu-header" id="scrollform">Order Form</h1>
     <div class="container" data-aos="zoom-in-down" data-aos-once="true">
         <div class="row">
             <div class="col-sm-12">
@@ -268,15 +273,15 @@
 
                         <br />
                         <label class="labelAlign" for="expmonth" style="width: 100px;">Exp Month:</label>
-                        <input type="text" id="expmonth" name="expmonth" placeholder="November">
+                        <input type="text" id="expmonth" name="expmonth" placeholder="November" required>
 
                         <br />
                         <label class="labelAlign" for="expyear" style="width: 100px;">Exp Year:</label>
-                        <input type="text" id="expyear" name="expyear" placeholder="2024">
+                        <input type="text" id="expyear" name="expyear" placeholder="2024" required>
 
                         <br />
                         <label class="labelAlign" for="cvv" style="width: 100px;">CVV:</label>
-                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                        <input type="text" id="cvv" name="cvv" placeholder="352" required>
                     </fieldset>
                     <input type="submit" id="submit" class="button" name="submit" value="Submit" onclick="submitform()" style="margin-top:10px" />
                     <input type="reset" id="reset" class="button" name="reset" value="Reset" style="margin-top:10px" />
@@ -286,7 +291,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12" data-aos="zoom-in-down" data-aos-once="true">
+            <div id="scrollmap" class="col-sm-12" data-aos="zoom-in-down" data-aos-once="true">
                 <h1 class="menu-header">Locate Us</h1>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3991.561050925468!2d103.77549831428553!3d1.3324389990281913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da108723f5373f%3A0x6e40e274e72cba1d!2sNgee%20Ann%20Poly!5e0!3m2!1sen!2ssg!4v1643622993033!5m2!1sen!2ssg" width="100%" height="450" style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
@@ -294,7 +299,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12" data-aos="zoom-in-down" data-aos-once="true">
+            <div id="scrolltable" class="col-sm-12" data-aos="zoom-in-down" data-aos-once="true">
                 <h1 class="menu-header">Opening Hours</h1>
                 <table id="times">
                     <tr>
@@ -339,18 +344,34 @@
             </div>
         </div>
     </div>
-    <h1 class="menu-header">Our Reviews</h1>
-    <div class="container">
-        
+    <h1 id="scrollreview" class="menu-header">Our Reviews</h1>
+    <div class="container" data-aos="zoom-in-down" >
+        <div class="row">
+            <div class="col-sm-6">
                 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/_zZfM1ZcR7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
+            </div>
+            <div class="col-sm-6 rating">
+                <span>Customer Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>5 Out Of 5 Starts average based on 23200 reviews.</p>
+                <a href="https://www.burpple.com/munch-canteen" target="_blank">Munch Reviews</a>
+            </div>
+        </div>
     </div>
+    <div class="gototopbutton" style="font-size:1.5rem;"><a style="color: white;" href="#scrollbanner">Return To Top</a></div>
     <div w3-include-html="/footer.html"></div>
     <script src="js/aos.js"></script>
     <script>
         AOS.init();
         w3.includeHTML();
-
+    </script>
+    <script src="js/smooth-scroll.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
     </script>
 </body>
 </html>
