@@ -80,14 +80,14 @@ $(document).ready(function () {
         var dishName = this.innerHTML;
         if (dishOrder[dishName] == 0 && formsubmit == false) {
             $("#foodItems").append(
-                `<hr id="${dishName}-hr"/>
+        `<hr id="${dishName}-hr"/>
         <div class="row" id="${dishName}-row">
             <div class="col-sm-7 ordered-dish">
                 <span class="ordered-name">${dishName}</span>
             </div>
 
             <div class="col-sm-3 d-flex align-self-center">
-                <input class="ordered-quantity" id="${dishName}-qt" type="number" min="1" max="10" value="1" onchange="CalculatePrice()"/>
+                <input class="ordered-quantity" class="order-qt" id="${dishName}-qt" type="number" min="1" max="10" value="1" onchange="CalculatePrice()"/>
             </div>
             <div class="col-sm-2 col-xs-1 d-flex align-self-center justify-content-around">
                 <button id="${dishName}-btn" class="btn btn-danger order-removebtn" type="button" onclick="RemoveOrder()"><i class="fas fa-times fa-lg"></i></button>
@@ -176,14 +176,14 @@ function ResetOrders() {
 
 function ValidateForm() {
     if (payable == 0) {
-        alert("No dishes are ordered! Please order atleast 1 dish.");
+        Swal.fire('Order Unsuccessful!',"No dishes are ordered! Please order atleast 1 dish.",'error');
     }
     else {
         var name = document.getElementById("fullname").value;
         var contact = document.getElementById("contact").value;
-        var date = document.getElementById("inputDate").value;
+        var date = new Date(document.getElementById("inputDate").value);
         var time = document.getElementById("inputTime").value;
-        alert(`Thank you ${name} for the order. The total payable price for the dishes ordered is $${payable.toFixed(2)}. Please wait patiently for the delivery, we will contact you at ${contact} nearing ${time} on ${date}.`);
+        Swal.fire('Order Successful!',`Thank you ${name} for the order. The total payable price for the dishes ordered is $${payable.toFixed(2)}. Please wait patiently for the delivery, we will contact you at ${contact} nearing ${time} on ${date.toLocaleDateString('en-GB')}.`, 'success');
         formsubmit = true;
         //disable everything
         document.getElementById("fullname").disabled = true;

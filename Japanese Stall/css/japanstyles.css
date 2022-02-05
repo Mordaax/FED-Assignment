@@ -109,7 +109,7 @@ header {
 .dishTriggerText {
     padding-bottom: 8px;
     font-family: 'Permanent Marker', cursive;
-    font-size: 2.5vw;
+    font-size: 3vw;
     text-align: center;
 }
 
@@ -160,7 +160,7 @@ header {
 .priceth {
     text-align: center;
     font-family: 'Permanent Marker', cursive;
-    font-size: 30px;
+    font-size: 2.5vw;
     font-weight: 100;
     border-bottom: 2px solid darkslategray !important;
 }
@@ -168,19 +168,13 @@ header {
 .pricetd {
     width: 20%;
     text-align: center;
-    font-size: 30px;
+    font-size: 2.5vw;
     border-bottom: 2px solid darkslategray !important;
 }
 
 /*****************************************/
 /***********Dessert Table Styles**********/
 /*****************************************/
-
-.dessertHeader {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 50px;
-    text-align: center;
-}
 
 .dessertPrice {
     background-color: rgb(245,245,245,0.9);
@@ -189,16 +183,17 @@ header {
 }
 
 .dessertpricetd {
-    width: 50%;
+    width: 35%;
     text-align: center;
-    font-size: 30px;
+    font-size: 2.5vw;
     border-bottom: 2px solid darkslategray !important;
 }
 
 .dessertbtn {
+    font-family: 'Permanent Marker', cursive;
     margin: 0 auto;
     display: flex !important;
-    width: 30%;
+    width: 37%;
     justify-content: center;
     align-items: center;
 }
@@ -216,7 +211,7 @@ header {
 
 .formheader {
     font-family: 'Permanent Marker', cursive;
-    font-size: 70px;
+    font-size: 5vw;
     text-align: center;
 }
 
@@ -259,10 +254,6 @@ hr {
 
 label {
     margin-bottom: 0.5rem;
-}
-
-.table th, .table td {
-    padding: 0.75rem !important;
 }
 
 .form-group {
