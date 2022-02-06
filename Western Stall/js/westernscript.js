@@ -49,10 +49,19 @@ var orderprice = {
     'Orange Juice': 2,
 };
 
+
+
 var totalprice = 0;
+
+function remove(itemname) {
+    totalprice -= orderprice[itemname];
+    document.getElementById('totalprice').innerHTML = '$' + totalprice;
+}
 function additem(itemname) {
-    
-    document.getElementById('orderitems').innerHTML += "<div class='orderitem'><h3>" + itemname + " x 1" + "</h3><div class='right'><h3>$" + orderprice[itemname] + " </div >";
+    document.getElementById('orderitems').innerHTML += "<div class='orderitem'><h3>" + itemname + " x 1  &nbsp" + "</h3>" +
+        "<button type='button' class='btn btn-danger' onclick=\"this.parentNode.parentNode.removeChild(this.parentNode);remove(" +"'"+itemname+"'" +");\">Remove</button>" +
+        "<div class='right'>" +
+        "<h3>$" + orderprice[itemname] + " </div >";
     totalprice += orderprice[itemname]
     document.getElementById('totalprice').innerHTML = '$' + totalprice;
 }
@@ -97,7 +106,12 @@ $("#reset").click(function () {
 $(document).ready(function ($) {
     $(document).on('submit', '#form', function (event) {
         event.preventDefault();
-        swal("Successful", "Order was submitted", "success");
+        if (document.getElementById('orderitems').innerHTML = "<div class='orderitem'><h3> Total price:</h3 > <div class='right' id='total'><h3 id='totalprice'>$0</h3></div></div>") {
+            swal("Unsuccessful", "You have to order something", "error");
+        }
+        else {
+            swal("Successful", "Order was submitted", "success");
+        }     
         $("#form").fadeOut(500);
         document.getElementById("orderitems").innerHTML = "<div class='orderitem'><h3> Total price:</h3 > <div class='right' id='total'><h3 id='totalprice'>$0</h3></div></div>";
         $("#form").fadeIn();

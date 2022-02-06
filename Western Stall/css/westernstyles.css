@@ -124,27 +124,26 @@ h3 {
     align-items: center;
 }
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .show {
     display: block;
 }
-.btn {
+#myBtnContainer .btn {
     border: none;
     outline: none;
     padding: 12px 16px;
     background-color: #f1f1f1;
     cursor: pointer;
-
 }
-.btn.active {
-        background-color: #FFC74F;
-        color: white;
+#myBtnContainer .btn.active {
+    background-color: #FFC74F;
+    color: white;
 }
-.btn:hover {
-        background-color: #FFC74F;
-    }
+#myBtnContainer .btn:hover {
+    background-color: #FFC74F;
+}
 
 .labelAlign {
     width: 150px;
