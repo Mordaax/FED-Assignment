@@ -192,6 +192,8 @@ header {
 .dessertbtn {
     font-family: 'Permanent Marker', cursive;
     margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
     display: flex !important;
     width: 37%;
     justify-content: center;
