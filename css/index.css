@@ -1,3 +1,8 @@
 .cover-page {
   height: 90vh;
 }
+
+.stall-img {
+  height: 400px !important;
+  object-fit: cover;
+}
