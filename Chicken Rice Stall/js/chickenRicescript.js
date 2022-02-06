@@ -153,33 +153,6 @@ function RemoveOrder() {
     UpdatePrice();
 }
 
-/*$(function () {
-    $('#chickenform').bind('submit', function (e) {
-        e.preventDefault();
-        if (amountpayable == 0) {
-            swal.fire({
-                icon: 'error',
-                title: 'Error!',
-                text: 'You must at least order something!'
-            })
-        }
-        else {
-            for (var i = 0, len = elements.length - 2; i < len; ++i) {
-                elements[i].disabled = true;
-                var customeraddr = document.getElementById("customeraddr").value;
-                var name = document.getElementById("name").value;
-                var date = document.getElementById("deliverydate").value;
-                var time = document.getElementById("deliverytime").value;
-                swal.fire({
-                    icon: "success",
-                    title: "Success!",
-                    text: `Thank you for your patronage ${customeraddr} ${name}! Your order will be delivered on ${date} at ${time}. Have a nice day!`
-                });
-            }
-        }
-    });
-});*/
-
 function SubmitOrder() {
     if (amountpayable == 0) {
         swal.fire({
@@ -191,7 +164,7 @@ function SubmitOrder() {
     else{
         var form = document.getElementById("chickenform");
         var elements = form.elements;
-        for (var i = 0, len = elements.length - 2; i < len; ++i) {
+        for (var i = 0, len = elements.length - 1; i < len; ++i) {
             elements[i].disabled = true;
         }
         var customeraddr = document.getElementById("customeraddr").value;
@@ -207,7 +180,7 @@ function ResetForm() {
     var form = document.getElementById("chickenform");
     form.reset();
     var elements = form.elements;
-    for (var i = 0, len = elements.length - 2; i < len; ++i) {
+    for (var i = 0, len = elements.length - 1; i < len; ++i) {
         elements[i].disabled = false;
     }
     amountpayable = 0;
