@@ -20,7 +20,6 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body onload="titleWriter(); delaySubTitle(); RestrictDate();">
     <div class="container-fluid">
@@ -315,7 +314,7 @@
                         </div>
                         <div class="form-group col-sm-6">
                             <label for="contact"><i class="fas fa-phone fa-lg"></i>Contact Number</label>
-                            <input class="form-control contact-number" type="tel" id="contact" name="contact" maxlength="8" size="8" placeholder="Contact" required pattern="[678]{1}[\d]{7}" title="8 digits starting with either 6, 8 or 9." />
+                            <input class="form-control contact-number" type="tel" id="contact" name="contact" maxlength="8" size="8" placeholder="Contact" required pattern="[689]{1}[\d]{7}" title="8 digits starting with either 6, 8 or 9." />
                         </div>
                     </div>
                     <div class="row">
@@ -359,7 +358,7 @@
         <br />
     </div>
     <div w3-include-html="/footer.html"></div>
-    <script src="js/aos.js"></script>
+    <script src="/js/aos.js"></script>
     <script>
         AOS.init();
         w3.includeHTML();
