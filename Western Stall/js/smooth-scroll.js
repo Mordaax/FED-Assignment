@@ -17,7 +17,7 @@
 		topOnEmptyHash: true,
 
 		// Speed & Duration
-		speed: 1000,
+		speed: 300,
 		speedAsDuration: false,
 		durationMax: null,
 		durationMin: null,
@@ -25,7 +25,7 @@
 		offset: 0,
 
 		// Easing
-		easing: 'easeInOutCubic',
+		easing: 'Linear',
 		customEasing: null,
 
 		// History
