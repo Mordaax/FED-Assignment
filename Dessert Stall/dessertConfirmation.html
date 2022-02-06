@@ -10,13 +10,15 @@
 
     <script src="/js/bootstrap.bundle.min.js" defer></script>
     <script src="js/dessertConfirmationScript.js" defer></script>
+    <script src="/js/w3.js"></script>
 
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="css/dessertStyles.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 <body onload="confirmationPage()">
+
+    <div w3-include-html="/header.html"></div>
 
     <div class="container-fluid">
         <div class="col-sm-12" align="center">
@@ -67,5 +69,16 @@
             <h7 id="totalPrice">Total Price: </h7>
         </div>
     </div>
+
+    <br /><br />
+
+    <div w3-include-html="/footer.html"></div>
+
+    <script>
+        w3.includeHTML();
+    </script>
+
+    <link rel="stylesheet" href="css/dessertStyles.css">
+
 </body>
 </html>
