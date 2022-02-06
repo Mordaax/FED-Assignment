@@ -17,13 +17,13 @@ body {
     font-size: 5em;
     text-align: center;
     color: darkblue;
-    height: 80vh;
+    height: 60vh;
     margin-top: 40vh;
 }
 
 .aboutustext {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
+    font-size: 30px !important;
     background-color: lightgrey;
     border-radius: 9px;
     text-align: center;
@@ -45,10 +45,10 @@ body {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 40px !important;
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: darkred;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    color: darkred !important;
 }
 
 .polaroid {
@@ -77,18 +77,18 @@ h2 {
 .modaltext {
     position: relative;
     padding-bottom: 8px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-size: 25px !important;
     text-align: center;
 }
 
 .modal-title {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-size: 20px !important;
 }
 
 .modal-img {
-    position: relative;
+    position: relative !important;
     width: 50%;
     display: block;
     margin-left: auto;
@@ -96,9 +96,9 @@ h2 {
 }
 
 .modal-caption {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
     text-align: center;
-    padding-top: 16px;
+    padding-top: 16px !important;
 }
 
 .displaytable{
@@ -106,12 +106,12 @@ h2 {
     border: 1px solid;
     margin: auto;
     vertical-align: top;
-    background-color: azure;
+    background-color: azure !important;
     text-align: left;
 }
 
     .displaytable td, .displaytable th {
-        border: 1px solid;
+        border: 1px solid !important;
     }
 
     .displaytable th:first-child, .displaytable th:last-child, .displaytable th:nth-child(2) {
@@ -125,20 +125,20 @@ h2 {
     margin: 0 auto;
     border-radius: 10px;
     background-color: lightblue;
-    font-family: Barlow;
+    font-family: Barlow !important;
 }
 
 .orderbutton {
     color: black;
-    background-color: violet;
+    background-color: violet !important;
 }
 
 .orders {
-    font-size: 120%;
-    margin-bottom: 1em;
-    margin-left: 10px;
+    font-size: 120% !important;
+    margin-bottom: 1em !important;
+    margin-left: 10px !important;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 5px !important;
 }
 
 .orderlist {
@@ -146,8 +146,8 @@ h2 {
 }
 
 .ordertable {
-    background-color: white;
-    border-radius: 5px;
+    background-color: white !important;
+    border-radius: 5px !important;
 }
 
 .buttons {
