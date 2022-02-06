@@ -1,5 +1,5 @@
 ﻿var i = 0;
-var titleTxt = 'Japanese Cuisine Stall';
+var titleTxt = 'Japanese Garden Stall';
 var titleSpeed = 50;
 
 var i2 = 0;
