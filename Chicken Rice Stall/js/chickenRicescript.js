@@ -129,7 +129,7 @@ function UpdatePrice() {
         sum += dishPayable[i];
     }
     var gstcharge = 0.07 * sum;
-    var amountpayable = gstcharge + sum;
+    amountpayable = gstcharge + sum;
     document.getElementById("totalprice").innerHTML = "$" + sum.toFixed(2);
     document.getElementById("GST").innerHTML = "$" + gstcharge.toFixed(2);
     document.getElementById("totalpayable").innerHTML = "$" + amountpayable.toFixed(2);
@@ -153,11 +153,44 @@ function RemoveOrder() {
     UpdatePrice();
 }
 
+/*$(function () {
+    $('#chickenform').bind('submit', function (e) {
+        e.preventDefault();
+        if (amountpayable == 0) {
+            swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'You must at least order something!'
+            })
+        }
+        else {
+            for (var i = 0, len = elements.length - 2; i < len; ++i) {
+                elements[i].disabled = true;
+                var customeraddr = document.getElementById("customeraddr").value;
+                var name = document.getElementById("name").value;
+                var date = document.getElementById("deliverydate").value;
+                var time = document.getElementById("deliverytime").value;
+                swal.fire({
+                    icon: "success",
+                    title: "Success!",
+                    text: `Thank you for your patronage ${customeraddr} ${name}! Your order will be delivered on ${date} at ${time}. Have a nice day!`
+                });
+            }
+        }
+    });
+});*/
+
 function SubmitOrder() {
     if (amountpayable == 0) {
-        swal.fire({ icon: "error", title: "Error!", text: "You must at least order something!" });
+        swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            text: 'You must at least order something!'
+        })
     }
-    else {
+    else{
+        var form = document.getElementById("chickenform");
+        var elements = form.elements;
         for (var i = 0, len = elements.length - 2; i < len; ++i) {
             elements[i].disabled = true;
         }
@@ -171,11 +204,30 @@ function SubmitOrder() {
 
 function ResetForm() {
     document.getElementById("order").innerHTML = "";
-    var form = document.getElementById("formid");
+    var form = document.getElementById("chickenform");
     form.reset();
     var elements = form.elements;
     for (var i = 0, len = elements.length - 2; i < len; ++i) {
         elements[i].disabled = false;
     }
-
+    amountpayable = 0;
+    dishDict = {
+        "Steamed Chicken Rice": 0,
+        "Roasted Chicken Rice": 0,
+        "Soy Sauce Chicken Rice": 0,
+        "Hainanese Chicken Rice": 0,
+        "Char Siew Rice": 0,
+        "Char Siew Roasted Pork Rice": 0,
+        "Roasted Pork Rice": 0,
+        "Braised Duck Rice": 0,
+        "Roasted Duck Rice": 0,
+        "Add Egg": 0,
+        "Extra Meat": 0,
+        "Add Vegetables": 0
+    }
+    dishPayable = [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+    document.getElementById("totalprice").innerHTML = "$0.00";
+    console.log("dog;");
+    document.getElementById("GST").innerHTML = "$0.00";
+    document.getElementById("totalpayable").innerHTML = "$0.00";
 }

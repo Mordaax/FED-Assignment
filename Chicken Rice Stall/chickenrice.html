@@ -8,19 +8,19 @@
     <meta name="description" content="Chicken Rice Webpage" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/chickenriceStyles.css" />
-    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
     <link rel="icon" type="image/x-icon" href="images/CHICKEN-circle.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Press Start 2P" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="sweetalert2.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/chickenRicescript.js" defer></script>
 </head>
 <body onload="titleWriter(); UpdateDate()">
-    <div id="header" w3-include-html="../header.html"></div>
     <div id="myModal" class="modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -38,6 +38,8 @@
         </div>
     </div>
 
+    <div id="header" w3-include-html="/header.html"></div>
+    <wbr />
     <div class="container-fluid">
         <section>
             <div class="row">
@@ -400,7 +402,7 @@
                                 </tr>
                             </table>
                         </div>
-                        <button class="form-group buttons" style="margin:0 0 1em 10px" type="submit" id="submitorder" onclick="SubmitOrder()">Order your food now!</button>
+                        <button class="form-group buttons" style="margin:0 0 1em 10px" type="submit" id="submitorder">Order your food now!</button>
                         <button class="form-group buttons" style="margin:0 0 1em 20px" type="reset" if="resetorder">Reset your order</button>
                     </form>
                 </div>
@@ -408,7 +410,7 @@
         </section>
         <br />
     </div>
-    <div w3-include-html="../footer.html"></div>
+    <div w3-include-html="/footer.html"></div>
     <script>
         AOS.init();
         w3.includeHTML();
