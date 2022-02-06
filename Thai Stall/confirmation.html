@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -16,16 +16,19 @@
     <script src="js/dishes.js"></script>
     <script defer src="js/modalcontroller.js"></script>
     <script src="js/confirmationcontroller.js"></script>
+    <link rel="icon" href="images/cover.png" />
     
 </head>
 <body>
-    <header></header>
+    <div id="header" w3-include-html="/header.html"></div>
+
     <h1 class="text-center">Confirmation</h1>
     <p class="text-center">
         Congratulations, your order has been placed successfully!
-        Below are the details of your order. Remember to save this page for your 
-        own reference
+        Below are the details of your order. Remember to save this page for your
+        own reference.
     </p>
+    <p class="text-center">An invoice will be sent to your email. The order will only be confirmed after payment.</p>
 
     <div class="container">
         <section>
@@ -66,7 +69,6 @@
             <h2 class="text-center">Orders</h2>
 
             <ul class="list-group" id="orderListGroup">
-
             </ul>
         </section>
         <section>
@@ -88,8 +90,12 @@
         </section>
     </div>
 
+    <div w3-include-html="/footer.html"></div>
+        
     <script>
+        w3.includeHTML();
         document.getElementById("orderListGroup").innerHTML = "";
         load_confirmation();
     </script>
 </body>
+</html>
