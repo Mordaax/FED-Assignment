@@ -9,6 +9,24 @@
     left:0px;
     top:0px;
 }
+@media screen and (max-width:992px){
+    .banner{
+        width: 100vw;
+        z-index: -1;
+        position: absolute;
+        left: 0px;
+        top: 250px !important;
+    }
+    p {
+        font-size:2vw !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    p {
+        font-size: 3vw !important;
+    }
+}
 
 @font-face {
     font-family: NexaRust;
@@ -102,7 +120,7 @@ h3 {
     font-weight: bold 700;
 }
 
-.col-sm-4 {
+.col-md-4 {
     margin: 5px;
     padding-top: 10px;
     margin: auto;
@@ -115,10 +133,12 @@ h3 {
     cursor: pointer;
 }
 
-.col-sm-4:hover{
+.col-md-4:hover{
     transform: scale(1.05) !important;
 }
-
+p{
+    font-size:1.5vw;
+}
 .item-text {
     text-align: center;
     padding: 10px 20px;
